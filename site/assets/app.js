@@ -6,7 +6,8 @@ const DATA = JSON.parse(document.getElementById("rounds").textContent);
 const share = readShare(location.search);
 const $ = (sel, el = document) => el.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const paras = (t) => esc(t).split("\n").map((l) => `<p>${l}</p>`).join("");
+// Answers sit inside <button>s, which may only hold inline content: one block-styled span per line.
+const lines = (t) => esc(t).split("\n").map((l) => `<span class="line">${l}</span>`).join("");
 
 function track(name, detail) {
   try {
@@ -48,8 +49,8 @@ class Game {
       <blockquote class="prompt">${esc(item.prompt)}</blockquote>
       <p class="ask" id="ask-${this.i}">Which answer did the AI write?</p>
       <div class="answers" role="group" aria-labelledby="ask-${this.i}">
-        <button type="button" class="answer" data-side="left"><span class="tag">Answer A</span>${paras(left)}</button>
-        <button type="button" class="answer" data-side="right"><span class="tag">Answer B</span>${paras(right)}</button>
+        <button type="button" class="answer" data-side="left"><span class="tag">Answer A</span>${lines(left)}</button>
+        <button type="button" class="answer" data-side="right"><span class="tag">Answer B</span>${lines(right)}</button>
       </div>
       <div data-feedback aria-live="polite"></div>`;
     this.stage.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => this.guess(b.dataset.side)));

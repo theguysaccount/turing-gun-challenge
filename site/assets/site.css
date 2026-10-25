@@ -46,8 +46,8 @@ p { margin: 0 0 1em; }
 @media (max-width: 680px) { .answers { grid-template-columns: 1fr; } }
 .answer { text-align: left; font: inherit; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 14px 16px; cursor: pointer; white-space: normal; }
 .answer:hover:not([disabled]) { border-color: var(--accent); }
-.answer p { margin: 0 0 0.5em; }
-.answer .tag { display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.answer .line { display: block; margin: 0 0 0.5em; }
+.answer .tag { display: block; font-size: 13px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
 .answer[disabled] { cursor: default; }
 .answer.was-ai { border-color: var(--ai); background: var(--ai-bg); }
 .answer.was-ai .tag { color: var(--ai); }
