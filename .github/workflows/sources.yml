@@ -1,0 +1,33 @@
+# Monthly: re-verify every human answer word for word against databricks-dolly-15k, confirm the
+# dataset is still CC BY-SA 3.0, and check the source and license links. A mismatch or license
+# change fails the run and opens an ops-alert issue. The site is never touched.
+name: Monthly source and license check
+
+on:
+  schedule:
+    - cron: "29 10 9 * *"   # the 9th of every month, 10:29 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  licenses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Re-verify sources, license and links
+        run: python3 scripts/check_sources.py
+      - name: Record the failure in an issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create ops-alert --color B42318 --description "Automated health check failed" 2>/dev/null || true
+          run="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          gh issue create --label ops-alert --title "Source or license check failed" --body "The monthly source check failed: $run. See OPERATIONS.md."

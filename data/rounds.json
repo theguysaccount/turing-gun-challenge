@@ -1,0 +1,379 @@
+{
+ "version": 1,
+ "source": {
+  "name": "databricks-dolly-15k",
+  "by": "Databricks employees",
+  "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k",
+  "file": "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/databricks-dolly-15k.jsonl",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "note": "Human answers are quoted verbatim from the dataset, whose contributors were instructed not to use generative AI."
+ },
+ "ai": {
+  "model": "Claude Opus 5.5 (Anthropic)",
+  "written": "2026-10-25",
+  "instructions": "Answer the question the way a person would, in about as many words as the human answer, without saying you are an AI."
+ },
+ "items": [
+  {
+   "id": "d1956",
+   "dolly_index": 1956,
+   "category": "general_qa",
+   "prompt": "What is one of your favorite hobbies?",
+   "human": "I love playing with my children. I have a 5 year old son and a 2 year old daughter, both of whom are an absolute delight. My son enjoys reading, exploring, and general horseplay, while my daughter enjoys pretending all of her toys are families. It's a lot of fun coming home every day and spending time with those two.",
+   "ai": "Honestly, cooking. I started during a long winter a few years ago and never stopped. Weeknights are simple, but on Sundays I'll spend the whole afternoon on something ambitious, like fresh pasta or a slow braise. It's the one time my phone stays in another room.",
+   "tell": "The human packs in specifics only a parent would mention (a 5-year-old son, a 2-year-old daughter, toys as families); the AI's Sunday-braise story is pleasant but could belong to anyone."
+  },
+  {
+   "id": "d12259",
+   "dolly_index": 12259,
+   "category": "general_qa",
+   "prompt": "What is one of your favorite hobbies?",
+   "human": "I'm a big sports fan, and as a native of Northern California, I really enjoy watching the San Francisco 49ers and Sacramento Kings in particular. I've always been a fan of the NFL and NBA, and watch nearly every game of my favorite teams.",
+   "ai": "Hiking, mostly. I live about an hour from the mountains, so most weekends I'm up early chasing a trail I haven't done yet. I'm not fast, but I love the quiet at the top and the sandwich that always tastes better up there.",
+   "tell": "The human names two real teams and a home region; the AI paints a tidy, relatable scene with no names at all."
+  },
+  {
+   "id": "d6640",
+   "dolly_index": 6640,
+   "category": "general_qa",
+   "prompt": "What is one of your favorite hobbies?",
+   "human": "I'm an avid reader, especially of audiobooks. I read or listen to more than a book a week, and will dabble in a lot of different genres. I've recently been reading a lot of sci-fi and fantasy, but also enjoy a good biography, military history, sociological, or general work of fiction as long as they are well written.",
+   "ai": "I'm really into board games. A group of us meets every Thursday, and we've worked through everything from quick card games to five-hour strategy epics. I'm usually the one who reads the rules out loud and then still loses.",
+   "tell": "Both are fluent. The human's list of genres ('military history, sociological') is a little unpolished; the AI ends on a neat self-deprecating joke."
+  },
+  {
+   "id": "d3440",
+   "dolly_index": 3440,
+   "category": "brainstorming",
+   "prompt": "What’s your favorite way to spend a day off?",
+   "human": "My favorite way to spend a day off is to spend it with my family and friends. I love to take long walks with my dog, go for bike rides, and spend time outdoors with my family. I also love to read, write, and catch up on my favorite shows.",
+   "ai": "Sleeping in without an alarm, then a long breakfast and a walk somewhere I haven't been in a while. By afternoon I'm usually reading on the couch, and I try not to make any plans I can't cancel.",
+   "tell": "The human says 'family' twice in two sentences, a very human repetition; the AI's day is smoother and more scene-like."
+  },
+  {
+   "id": "d3449",
+   "dolly_index": 3449,
+   "category": "brainstorming",
+   "prompt": "What are four reasons why you have a car on your front lawn?",
+   "human": "1. I ran out of parking in my driveway\n2. The car drips oil and the grass absorbs the oil better than the concrete driveway\n3. It dropped from the sky and I don't have the money to get it removed\n4. My wife often kicks me out of the house and I use it to sleep in",
+   "ai": "1. My garage is full of things I swear I'll sell.\n2. It's for sale and the lawn is the best billboard I've got.\n3. I'm fixing it and the driveway slopes.\n4. My teenager parked it there and I'm too tired to argue.",
+   "tell": "Both are jokey lists. The human's punchlines are stranger (a car fell from the sky, the grass absorbs oil better); the AI's reasons are more plausible and evenly sized."
+  },
+  {
+   "id": "d14241",
+   "dolly_index": 14241,
+   "category": "general_qa",
+   "prompt": "What is your favorite piece of classical music?",
+   "human": "I'm not sure if I have a single favorite piece, as my tastes and preferences tend to change over time.  But right now I am really enjoying a piece called \"Habanera\" from the opera Carmen, written by Georges Bizet.  Previously I was listening and playing along to several musical impromptus by Schubert.",
+   "ai": "It changes, but I keep coming back to Debussy's 'Clair de Lune'. It was the first piece I learned on piano as a kid, badly, and I still can't hear it without remembering my teacher tapping the beat on my shoulder.",
+   "tell": "The human mentions a current favorite and playing along with Schubert; the AI invents a warm childhood memory, a common move for AI writing as a person."
+  },
+  {
+   "id": "d1303",
+   "dolly_index": 1303,
+   "category": "open_qa",
+   "prompt": "What is the meaning of life?",
+   "human": "Some say it's love and family, others say it's 42. I say you should probably figure this one out for yourself.",
+   "ai": "Probably something like: find a few people you love, do work you're proud of, and laugh as often as you can. Nobody hands you a better answer than that.",
+   "tell": "The human cracks a Hitchhiker's Guide joke ('42') and shrugs the question back at you. The AI gives a sincere, quotable answer."
+  },
+  {
+   "id": "d3693",
+   "dolly_index": 3693,
+   "category": "creative_writing",
+   "prompt": "Do you get scared?",
+   "human": "Ofcourse! Everyone feels scared of something or the other. It is only the intensity that makes it different. I mean, I may be scared of heights, but I can chose to not let it get to me even when I am at a height, by say singing a rhyme and distracting my mind. Fear is in your head. So be fearless.",
+   "ai": "Of course I do. Mostly little things, like walking into a dark house or waiting for test results. I've learned that being brave isn't not being scared, it's just doing the thing anyway.",
+   "tell": "The human writes 'Ofcourse' and 'chose' for 'choose', and wanders into advice; the AI is tidy and ends on a familiar motto."
+  },
+  {
+   "id": "d5967",
+   "dolly_index": 5967,
+   "category": "general_qa",
+   "prompt": "Who is the greatest guitarist of all time?",
+   "human": "Music tastes differ greatly so it's difficult to come up with a definitive answer on who the best guitarist is. Some one once asked Jimmy Hendrix, arguably one of the greatest guitarist of all time, who the greatest guitarist is and he answered \"I don't know ask Phil Keaggy\". Regardless Jimmy Hendrix is considered the greatest guitarist of all time.",
+   "ai": "That's an impossible one, but if I had to pick I'd say Jimi Hendrix. He changed what people thought a guitar could even sound like, and almost every rock guitarist since then owes him something.",
+   "tell": "The human misspells Jimi as 'Jimmy' and tells a half-remembered anecdote; the AI's answer is clean and well-organized."
+  },
+  {
+   "id": "d8687",
+   "dolly_index": 8687,
+   "category": "general_qa",
+   "prompt": "Are you going for a walk today?",
+   "human": "I'll go for a walk today, the weather is finally perfect! I've been staying indoors lately due to rain, but with this sun shining, I can't stay indoors any longer!",
+   "ai": "Yes! It's finally dry after a week of rain, so I'm taking the long loop around the park after lunch. I've been cooped up way too long.",
+   "tell": "Very close. The human piles on exclamation marks and 'can't stay indoors any longer'; the AI plans a specific 'long loop' route."
+  },
+  {
+   "id": "d2560",
+   "dolly_index": 2560,
+   "category": "general_qa",
+   "prompt": "Write a positive Yelp review for a Chinese restaurant called Dim Sum Queen",
+   "human": "We went to Dim Sum Queen for lunch today and absolutely loved it. The Xiao Long Bao was juicy and fresh, the pork buns were perfectly fluffy, and everything was so fast. Great ambiance as well, and lots of space for large groups. Definitely coming again!",
+   "ai": "Dim Sum Queen lives up to its name! The har gow were delicate and packed with shrimp, the turnip cakes had that perfect crispy edge, and the carts kept coming. Service was quick and friendly. Go early on weekends, it fills up fast.",
+   "tell": "Both read like real reviews. The human's details (juicy xiao long bao, room for big groups) are slightly less polished than the AI's evenly balanced praise and tip."
+  },
+  {
+   "id": "d3039",
+   "dolly_index": 3039,
+   "category": "creative_writing",
+   "prompt": "What is it like being the last person on earth?",
+   "human": "You would think the world would be yours to explore and enjoy. In actuality, it's incredibly lonely. The quiet is almost deafening. It's also much harder to get to and from as gas stations no longer work, as there is no electricity. I never thought I would miss so desperately to wait in line and go to a crowded restaurant.",
+   "ai": "It's quieter than you'd think. The first week felt like a vacation, but now I talk to myself just to hear a voice. I eat whatever I find, sleep wherever I want, and I'd trade all of it for one stranger complaining about the weather.",
+   "tell": "The human drifts into practical details (gas stations, no electricity); the AI goes for an emotional, quotable last line."
+  },
+  {
+   "id": "d3998",
+   "dolly_index": 3998,
+   "category": "general_qa",
+   "prompt": "How do you care for a pet?",
+   "human": "It really depends on the type of pet. But generally, they require food, exercise, water, a place to live and sleep appropriate to their species, and attention. Some pets require more attention than others. For example, a turtle is probably pretty self-sufficient, while a border collie will expect significant interaction.",
+   "ai": "Every pet is different, but the basics are the same: fresh food and water, a clean place to sleep, regular vet visits, and attention. A goldfish needs a clean tank; a puppy needs walks, training and a lot of patience.",
+   "tell": "The human's turtle-versus-border-collie comparison is a lived-in detail; the AI's list is complete and symmetrical."
+  },
+  {
+   "id": "d4988",
+   "dolly_index": 4988,
+   "category": "creative_writing",
+   "prompt": "Write me a thank you note for my high-school teacher",
+   "human": "Thank you for being a supportive teacher and encouraging me to keep learning. I will always remember your encouragement as I move forward in my studies.",
+   "ai": "Dear Mr. Alvarez, thank you for making chemistry the class I looked forward to. You stayed after school more times than I can count and never made me feel dumb for asking. I hope you know how much that mattered.",
+   "tell": "The human note is short and generic; the AI invents a name and a specific memory, which makes it sound more personal than the real one."
+  },
+  {
+   "id": "d5033",
+   "dolly_index": 5033,
+   "category": "creative_writing",
+   "prompt": "What season is the best season to visit Chicago?",
+   "human": "The best 90 days of the year in Chicago is summer. The weather is usually always hot! You can run/walk/bike on the lakefront path, rent a boat and go to the \"playpen\", enjoy a Chicago street festival. Everyone is out and about and it's a marked change from winter.",
+   "ai": "Summer, no question. The lakefront is packed, there's a street festival every weekend, and you can sit on a rooftop at night without a coat. Just don't let anyone talk you into visiting in February.",
+   "tell": "The human writes 'the best 90 days' and 'usually always hot'; the AI is smoother and adds a joke about February."
+  },
+  {
+   "id": "d5050",
+   "dolly_index": 5050,
+   "category": "general_qa",
+   "prompt": "What is freedom?",
+   "human": "Freedom could mean something different for every person in the world. In this time and place I think of freedom as the ability to make my own decisions.",
+   "ai": "To me, freedom is being able to choose how I spend my days and say what I think without being afraid. It's easy to forget until it's taken away.",
+   "tell": "Both are short and reflective. The AI's ending is more polished and slogan-like."
+  },
+  {
+   "id": "d5129",
+   "dolly_index": 5129,
+   "category": "brainstorming",
+   "prompt": "What's your favorite stars in the sky?",
+   "human": "My favorite star in the sky is Sirius, which is the brightest star at night. The star is designated α Canis Majoris and is 8.6 light years from the Earth. I won't tell you that I actually came from Sirius B which is already a white dwarf that orbits the Sirius A.",
+   "ai": "Probably Orion's belt, because it's the only thing I can reliably find. My dad showed me those three stars when I was little and I still look for them every winter.",
+   "tell": "The human drops a catalog designation and a joke about being from Sirius B; the AI goes with a gentle family memory."
+  },
+  {
+   "id": "d6545",
+   "dolly_index": 6545,
+   "category": "general_qa",
+   "prompt": "How many items is in a baker's dozen?",
+   "human": "A baker's dozen typically contains 13 items vs. 12. The term baker's dozen has roots in medieval England, when bakers would create an extra item to avoid falling short, and facing punishment. The term has carried on to today, where if you ask for a baker's dozen, you'll get 13 of the item you are ordering!",
+   "ai": "Thirteen! The story is that medieval bakers added an extra loaf so they wouldn't get fined for selling short weight, and the name stuck.",
+   "tell": "Both explain the history; the human's is longer and repeats itself, the AI's is compact."
+  },
+  {
+   "id": "d6898",
+   "dolly_index": 6898,
+   "category": "creative_writing",
+   "prompt": "Write a witty paragraph about a chicken's thought process for crossing the road.",
+   "human": "Oh my, that is a lovely shrub over there past the black track. I wonder if it smells as good as I imagine it would. I do wonder if all the fast folks passing by know this shrub and thus are not bothered by the curiosity. There is no way around it; I have to get close to confirm it.",
+   "ai": "Okay. Road. Big road. Other side has better grass, I'm almost sure. Ted went last week and came back very smug. If Ted can do it, I can do it. Here I go. Wait, what's that noise? Never mind, running!",
+   "tell": "The human's chicken muses about a shrub in long, slightly old-fashioned sentences; the AI's chicken speaks in quick, punchy fragments."
+  },
+  {
+   "id": "d8059",
+   "dolly_index": 8059,
+   "category": "open_qa",
+   "prompt": "What does it mean if a dinner \"smacks\"?",
+   "human": "Food \"smacks\" when it is really good and tasty. It's possibly a reference to \"lip-smacking\" when food is especially good. When you love what you're eating, you can say \"this food smacks\".",
+   "ai": "It means it's really, really good. Like 'this burger smacks'. It probably comes from lip-smacking, but now it's just how you say something tastes amazing.",
+   "tell": "Nearly identical content; the human is a bit more formal, the AI more casual."
+  },
+  {
+   "id": "d10202",
+   "dolly_index": 10202,
+   "category": "brainstorming",
+   "prompt": "List some ideas for gifts I could give to my sister on her birthday?",
+   "human": "Chocolate\nA book you loved\nA cute top\nA floppy straw sun hat\nTake her out to brunch\nPrint her out a book of photos of the two of you growing up\nMake a box of self-care items like good lotion, a sleep mask, etc.\nGive her a board game at a special party you arrange, at which to play it!",
+   "ai": "A cozy blanket\nConcert tickets for a band she loves\nA framed photo of the two of you\nA nice candle\nA cooking class you take together\nHer favorite snacks in a homemade basket",
+   "tell": "Both are gift lists. The human's has a run-on final item about a board game party; the AI's items are all about the same length."
+  },
+  {
+   "id": "d10943",
+   "dolly_index": 10943,
+   "category": "general_qa",
+   "prompt": "What's the preferred mode of transportation in Vietnam?",
+   "human": "You will often find the quickest, most enjoyable way to explore the cities of Vietnam is by motorbike. Whether it's a mo-ped, vespa, motorcycle, or dirt bike, these two wheeled options are the preferred method my many to get around.",
+   "ai": "Motorbikes, by a mile. Scooters are everywhere in Hanoi and Ho Chi Minh City, and renting one or hopping on a motorbike taxi is the fastest way through traffic.",
+   "tell": "The human writes 'the preferred method my many' (a typo); the AI's sentence is clean and names cities."
+  },
+  {
+   "id": "d12992",
+   "dolly_index": 12992,
+   "category": "open_qa",
+   "prompt": "What is heavier, 1 centimetre or 5 miles?",
+   "human": "Unfortunately, I can't answer that question. A centimetre and a mile are both units of measurement and therefore don't have an associated weight.",
+   "ai": "Trick question! A centimetre and five miles are both lengths, not weights, so neither one is heavier.",
+   "tell": "The human apologizes ('Unfortunately, I can't answer that'), which sounds like a chatbot; the AI answer is breezier. A classic trap."
+  },
+  {
+   "id": "d13454",
+   "dolly_index": 13454,
+   "category": "brainstorming",
+   "prompt": "Why people love youtube as a search option rather then Google?",
+   "human": "Because people love to view rather then read to gain knowledge also I believe When you see you capture most rather you read (or hear)",
+   "ai": "Because a lot of people would rather watch someone do it than read about it. If you're fixing a sink or learning a guitar chord, a two-minute video beats ten paragraphs.",
+   "tell": "The human's grammar slips ('rather then', run-on sentence); the AI gives a fluent example."
+  },
+  {
+   "id": "d13517",
+   "dolly_index": 13517,
+   "category": "open_qa",
+   "prompt": "In the english language what is alliteration?",
+   "human": "Alliteration as I learned it in school from my second grade teacher is the repetition of consonant vowels sounds at the beginning of words and the end of sentences.  An example of alliteration is the following \"people are so perplexing when they are pushy.\"",
+   "ai": "It's when a bunch of words close together start with the same sound, like 'Peter Piper picked a peck of pickled peppers.' Writers use it to make a line catchy.",
+   "tell": "The human mentions a second-grade teacher and gets the definition slightly wrong ('end of sentences'); the AI uses the most famous example."
+  },
+  {
+   "id": "d14317",
+   "dolly_index": 14317,
+   "category": "open_qa",
+   "prompt": "Have you ever seen the Milky Way?",
+   "human": "I have seen the Milky Way on a few occasions.  Its usually on a clear, moonless night when I am in a remote location.  For some reason, it is brighter when the air is colder. I don't get to see the MIlky Way often, but when I do, I am always amazed by its beauty.",
+   "ai": "Yes, once, camping in the desert in Utah. There were no lights for miles and it looked like someone had spilled sugar across the sky. I didn't know it could look like that.",
+   "tell": "The human has a typo ('MIlky') and an observation about cold air; the AI reaches for a vivid simile."
+  },
+  {
+   "id": "d14983",
+   "dolly_index": 14983,
+   "category": "creative_writing",
+   "prompt": "Will commercial space travel be affordable to me in my lifetime and what would I pay for it?",
+   "human": "I have always been fascinated by space and space travel. The cost of space travel is astronomical by most peoples standards, however, we are starting to hear of companies that are working on making space travel more affordable. Depending on my financial situation at retirement, I would pay up to $100000 to travel to space.",
+   "ai": "Maybe a short suborbital hop, if prices keep falling. I'd probably pay a few thousand dollars, tops. A trip to orbit will likely stay a rich person's thing in my lifetime.",
+   "tell": "The human starts with personal fascination and names a big number ($100000); the AI hedges carefully."
+  },
+  {
+   "id": "d606",
+   "dolly_index": 606,
+   "category": "general_qa",
+   "prompt": "How much wood would a woodchuck chuck if a woodchuck could chuck wood?",
+   "human": "This phrase is not meant to have an answer because it's a tongue twister. Tongue twisters are meant to be difficult to say, especially when spoken quickly. It's regarded as a fun way for children to learn about alliteration, how to pronounce and enunciate similar sounding words with different meaning and supports a basis for spoken language development.",
+   "ai": "None, because it's a tongue twister, not a real question. Although some people insist the answer is 'as much wood as a woodchuck could chuck.'",
+   "tell": "The human explains tongue twisters and child development at length; the AI keeps it light."
+  },
+  {
+   "id": "d670",
+   "dolly_index": 670,
+   "category": "creative_writing",
+   "prompt": "Tell me a story in a few sentences about food and how a few short words can make someone hungry",
+   "human": "Driving past the Farmer's Market Café on the Al in Suffolk, England, I saw a sign outside that read, in huge letters, Ham Hock Hash. Nothing else. No other food, no opening times, nothing. Just three little words that launched a thousand U-turns.",
+   "ai": "A chalkboard outside a diner said just two words: Pie. Today. Nothing else. I'd already had lunch, I wasn't hungry, and I was inside within a minute.",
+   "tell": "Both are tiny stories. The human's is oddly specific (a café on the A1 in Suffolk, 'a thousand U-turns'); the AI's is cleaner and more generic."
+  },
+  {
+   "id": "d1197",
+   "dolly_index": 1197,
+   "category": "brainstorming",
+   "prompt": "If you could not fill a pool with water, what would you fill it with?",
+   "human": "If I could not fill a pool with water, I would fill it with; 1) feathers, 2) bubbles, 3) flour, 4) syrup, 5) sour cream, 6) planted flowers, or 7) rocks.",
+   "ai": "Ball-pit balls, easily. Imagine diving into a pool full of them as an adult. Second choice: Jell-O, but only for the photos.",
+   "tell": "The human lists seven things, from sour cream to rocks; the AI picks one and jokes about it."
+  },
+  {
+   "id": "d1255",
+   "dolly_index": 1255,
+   "category": "open_qa",
+   "prompt": "Are cats or dogs better?",
+   "human": "The debate on if cats or dogs are better has been talked about for ages, there is no clear winner. Humans love being binary and needing to choose between one or the other. Each person is different, and can benefit from cats AND dogs in their life. You can like both cats and dogs, and like them equally as well.",
+   "ai": "Honestly, it depends on you. Dogs are great if you want a buddy for walks and constant affection. Cats are better if you like company that doesn't need you every minute. I'm a dog person, but I get it.",
+   "tell": "The human muses that 'humans love being binary'; the AI weighs both sides and picks one, a familiar pattern."
+  },
+  {
+   "id": "d1944",
+   "dolly_index": 1944,
+   "category": "open_qa",
+   "prompt": "Why do dogs make great pets?",
+   "human": "Dogs make great pets because they make us feel less alone. Dogs can be there for you when people can't and offer unconditional love, support and of course cuddles. They can also help people stay active because they do require walks.",
+   "ai": "Dogs are loyal, always happy to see you, and get you outside whether you feel like it or not. It's hard to have a bad day when something is that excited you came home.",
+   "tell": "Both are warm. The human lists 'love, support and of course cuddles'; the AI closes with an emotional image."
+  },
+  {
+   "id": "d2051",
+   "dolly_index": 2051,
+   "category": "general_qa",
+   "prompt": "What's the difference between a knot, a hitch and a bend?",
+   "human": "A knot stands by itself and will not come undone, an example is the figure 8 knot. A hitch, such as the clove hitch, requires something else such as a rope, a tree, or a carabiner to stay intact. A bend joins two ropes together.",
+   "ai": "A knot is tied in a single rope, like a figure eight. A hitch ties a rope to something else, like a post or a ring. A bend joins two ropes together.",
+   "tell": "Almost the same answer; the AI's is slightly more parallel in structure."
+  },
+  {
+   "id": "d14884",
+   "dolly_index": 14884,
+   "category": "creative_writing",
+   "prompt": "What makes you smile? What makes you happy?",
+   "human": "I smile when I can let life slow down a bit and I can stop to appreciate what's around me. The small things are the best. A passerby having a happy moment. A great song. A nice tree.",
+   "ai": "Little things, mostly. My dog doing a full-body wiggle when I get home. Coffee on the porch before anyone else is up. A text from an old friend out of nowhere.",
+   "tell": "Both list small joys. The human's 'A nice tree.' is a charmingly odd detail; the AI's items are evenly sized."
+  },
+  {
+   "id": "d14366",
+   "dolly_index": 14366,
+   "category": "brainstorming",
+   "prompt": "How can I tell the neighbors kids to quiet down without being perceived as a grouchy old man?",
+   "human": "There isn't a way that you can not come off as a grouchy old man by telling kids to quiet down.",
+   "ai": "You can't fully avoid it, but kindness helps. Go over, introduce yourself, compliment their game, then ask if they could keep it down after eight because you're up early. A smile goes a long way.",
+   "tell": "The human just says it's impossible (blunt, funny); the AI gives a helpful step-by-step plan."
+  },
+  {
+   "id": "d580",
+   "dolly_index": 580,
+   "category": "brainstorming",
+   "prompt": "Give me a list of the 3 best activities to do with your kids when the weather is bad outside",
+   "human": "Build a fort in the living room with blankets, pillows and chairs. Watch nostalgic movies like The Goonies, Sandlot and Honey, I Shrunk the kids. Build a lego castle.",
+   "ai": "Build a blanket fort and watch a movie inside it. Do a living-room scavenger hunt. Bake cookies together and let them do the decorating.",
+   "tell": "The human names specific movies (The Goonies, Sandlot); the AI's three ideas are tidy and generic."
+  },
+  {
+   "id": "d1773",
+   "dolly_index": 1773,
+   "category": "general_qa",
+   "prompt": "What is your favorite fast-casual restaurant and why?",
+   "human": "Chipotle is my favorite place to grab a quick bite to eat.  The food is fresh and delicious. Plus, they offer a simple menu and have high quality ingredients.   It is also very affordable.  The Barbacoa bowl tastes amazing and is my favorite thing to order",
+   "ai": "Probably Sweetgreen. It's quick, the salads actually fill me up, and I can eat there without feeling sluggish all afternoon. The harvest bowl is my go-to.",
+   "tell": "Both name a chain and a favorite order; the human's has odd spacing and a missing period at the end."
+  },
+  {
+   "id": "d3143",
+   "dolly_index": 3143,
+   "category": "general_qa",
+   "prompt": "What makes Southwest Virginia special?",
+   "human": "Southwest Virginia is a beautiful place.  The area is nestled in the Appalachian Mountains.  The perfect backdrop for incredible scenic views.  The climate is fantastic.  Springtime and Fall brings brisk weather and the welcoming or good bye of leaves.  Finally, the friendly people of Virginia are eager to share the beauty with visitors.",
+   "ai": "It's the mountains for me. The Blue Ridge views, the small towns, the old-time music on Friday nights. People are friendly and in no hurry, and fall there is just unreal.",
+   "tell": "The human writes in short, choppy sentences ('The perfect backdrop for incredible scenic views.'); the AI flows."
+  },
+  {
+   "id": "d2058",
+   "dolly_index": 2058,
+   "category": "brainstorming",
+   "prompt": "Can Solar panels help you maintain power during a storm ?",
+   "human": "It would really depend on how much cloud coverage you are getting but your panels should be able to generate some power.",
+   "ai": "Partly. Even under heavy clouds they'll produce something, but if the grid goes down most systems shut off for safety unless you have a battery.",
+   "tell": "The human answer is short and casual; the AI adds a technical caveat about batteries and safety shutoffs."
+  },
+  {
+   "id": "d1409",
+   "dolly_index": 1409,
+   "category": "open_qa",
+   "prompt": "Why do people live in homes?",
+   "human": "People live in homes because its a way to protect you from the elements of nature like storms, heavy rain, lightning, heat and humidity.  Its a place that offers comfort with air conditioning, offers a comfortable place to sleep, and offers a comfortable place to cook and eat and have entertaining activities like television, and spending time with your family.",
+   "ai": "For shelter, mostly: somewhere warm and dry to sleep, keep your things, and be safe. But a home is also where you get to relax and be yourself.",
+   "tell": "The human repeats 'comfortable' three times and lists air conditioning and television; the AI is short and tidy."
+  }
+ ]
+}
