@@ -49,8 +49,8 @@ class Game {
       <blockquote class="prompt">${esc(item.prompt)}</blockquote>
       <p class="ask" id="ask-${this.i}">Which answer did the AI write?</p>
       <div class="answers" role="group" aria-labelledby="ask-${this.i}">
-        <button type="button" class="answer" data-side="left"><span class="tag">Answer A</span>${lines(left)}</button>
-        <button type="button" class="answer" data-side="right"><span class="tag">Answer B</span>${lines(right)}</button>
+        <button type="button" class="answer" data-side="left" aria-label="Answer A: ${esc(left)}"><span class="tag">Answer A</span>${lines(left)}</button>
+        <button type="button" class="answer" data-side="right" aria-label="Answer B: ${esc(right)}"><span class="tag">Answer B</span>${lines(right)}</button>
       </div>
       <div data-feedback aria-live="polite"></div>`;
     this.stage.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => this.guess(b.dataset.side)));
