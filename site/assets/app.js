@@ -68,6 +68,7 @@ class Game {
       b.classList.add(isAI ? "was-ai" : "was-human");
       if (b.dataset.side === side) b.classList.add("picked");
       b.querySelector(".tag").textContent = isAI ? `AI · ${DATA.ai.model.replace(/ \(.*\)/, "")}` : "Human · Dolly contributor";
+      b.setAttribute("aria-label", `${b.querySelector(".tag").textContent}: ${isAI ? round.item.ai : round.item.human}`);
     });
     const last = this.i === this.rounds.length - 1;
     const fb = $("[data-feedback]", this.stage);
