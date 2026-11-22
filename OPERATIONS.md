@@ -23,6 +23,7 @@ Turing.gun is a static site on GitHub Pages: ten rounds of "which answer did the
 ## What to watch
 
 - **Open `ops-alert` issues.**
+- **Retried fetches.** Since 2026-11-22 the self-test and the smoke test after each deploy load a page again after 10, 20 and 30 seconds when GitHub Pages answers with a 5xx, times out or drops the connection: at most six retries per run in `scripts/check_live.py` and four in `scripts/e2e.sh`, so a site that's really down still fails within minutes. Each retry leaves a warning on the run, and only a page that still fails counts. A 403 or 404 fails at once.
 - **Never reorder or edit existing rounds in place.** A challenge link replays a game by seed over the current pool; changing the pool changes which rounds a seed picks. Add rounds in a new release and accept that older links then pick a different set (the score banner still works).
 
 ## Keys Jack can turn later
@@ -44,6 +45,43 @@ A link under every score and on the Sources page, hidden until set: repo variabl
 ### 4. Custom domain
 
 No domain matched in the portfolio; "Turing.gun" isn't a registrable name (there is no .gun top-level domain). Candidates: `turinggun.com` (unregistered on 2026-10-25 per WHOIS, about $11/yr; matches the note's brand), `humanorai.app` (availability not confirmed), or a subdomain of an owned domain such as `turing.persistventures.com` (free; persistventures.com is in the portfolio). DNS: `A @` → `185.199.108.153`–`185.199.111.153` (four records), `AAAA @` → `2606:50c0:8000::153`–`8003::153`, `CNAME www` → `theguysaccount.github.io` (for a subdomain, one CNAME to `theguysaccount.github.io`); Settings → Pages → Custom domain, then Enforce HTTPS; repo variable `SITE_URL`; redeploy.
+
+No name was chosen as of 2026-11-22.
+
+#### Exact commands to switch the base URL (added 2026-11-22)
+
+The steps above as commands, for the domain rollout session or anyone with `gh` signed in as theguysaccount. Every address the build writes into the site (canonicals, sitemap, robots.txt, Open Graph tags, JSON-LD, IndexNow) comes from the one repo variable `SITE_URL`, and the deploy smoke test and the weekly self-test follow it too, so no file needs editing. DNS is the domain rollout session's job; nothing in this repo changes DNS. Don't add a `CNAME` file: this site deploys through Actions, which ignores one.
+
+```bash
+REPO=theguysaccount/turing-gun-challenge
+DOMAIN=turing.persistventures.com   # the chosen name: no https://, no trailing slash
+
+# 0. DNS must already point at GitHub. Ask a public resolver (a local cache can be stale):
+curl -s "https://dns.google/resolve?name=$DOMAIN&type=A"   # expect 185.199.108-111.153 (and theguysaccount.github.io. for a subdomain)
+
+# 1. Make it the Pages custom domain. GitHub requests a certificate, and github.io starts redirecting to it.
+gh api -X PUT "repos/$REPO/pages" -f cname="$DOMAIN"
+
+# 2. Enforce HTTPS once the certificate exists (minutes, sometimes hours). This tries every 2 minutes for 2 hours.
+for i in $(seq 60); do gh api -X PUT "repos/$REPO/pages" -F https_enforced=true --silent 2>/dev/null && break; sleep 120; done
+gh api "repos/$REPO/pages" --jq '{cname, https_enforced, certificate: .https_certificate.state}'   # expect true, "approved"
+
+# 3. Switch the base URL and redeploy.
+gh variable set SITE_URL -R "$REPO" --body "https://$DOMAIN"
+gh workflow run pages.yml -R "$REPO"
+sleep 20; gh run watch -R "$REPO" --exit-status "$(gh run list -R "$REPO" --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId')"
+
+# 4. Pages' CDN keeps each page for up to 10 minutes (max-age=600), so wait before checking canonicals.
+#    Then, from a checkout of this repo. (A machine whose DNS cache doesn't know the new name yet fails
+#    these with "nodename nor servname provided"; the selftest.yml run on GitHub's runners still counts.)
+sleep 600
+scripts/e2e.sh "https://$DOMAIN/"
+python3 scripts/check_live.py "https://$DOMAIN"
+curl -sI "https://theguysaccount.github.io/${REPO#*/}/" | grep -i '^location'   # expect https://$DOMAIN/
+gh workflow run selftest.yml -R "$REPO"
+```
+
+Afterwards: `gh repo edit "$REPO" --homepage "https://$DOMAIN"`, put the new address in the **Live:** line at the top, and add the domain to Google Search Console (key 6). To undo: `gh variable delete SITE_URL -R "$REPO"`, `gh api -X PUT "repos/$REPO/pages" -F cname=null`, then `gh workflow run pages.yml -R "$REPO"`.
 
 ### 5. Analytics and leaderboard
 
