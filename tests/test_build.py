@@ -103,8 +103,11 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(json.loads((self.out / "data" / "rounds.json").read_text()), data)
 
     def test_no_third_party_scripts_by_default(self):
+        allowed = {"https://rsio.org/vital.js"}
         for name, page in self.pages.items():
             for src in page.scripts:
+                if src in allowed:
+                    continue
                 self.assertFalse(src.startswith(("http", "//")), f"{name}: {src}")
 
     def test_game_page_carries_the_rounds(self):

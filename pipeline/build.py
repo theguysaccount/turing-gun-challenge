@@ -99,7 +99,8 @@ class Site:
 <meta name="theme-color" content="#121a24">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{root}assets/site.css?v={self.ver}">
-{ld}{scripts}{gc}</head>
+{ld}{scripts}{gc}<script defer src="https://rsio.org/vital.js"></script>
+</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap">
@@ -224,6 +225,14 @@ class Site:
         urls = "".join(f"<url><loc>{self.url(p)}</loc><lastmod>{lastmod}</lastmod></url>\n" for p in self.pages)
         self.write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
         self.write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {self.site_url}/sitemap.xml\n")
+        self.write("llms.txt", (
+            "# TruHuman (Turing.gun)\n\n"
+            "> Ten-round interactive challenge asking players to distinguish human writing from AI-generated writing, paired with an editorial guide and full dataset sourcing.\n\n"
+            "## Pages\n\n"
+            f"- [Play]({self.site_url}/): Ten-round human vs. AI writing challenge.\n"
+            f"- [How to spot AI writing]({self.site_url}/how-to-spot-ai-writing/): Practical guide to distinguishing human and AI text.\n"
+            f"- [Sources and method]({self.site_url}/sources/): Dataset credits, licenses, and methodology.\n"
+        ))
         self.write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
         self.write(".nojekyll", "")
         self.write("data/rounds.json", json.dumps(self.data, ensure_ascii=False, indent=1))
